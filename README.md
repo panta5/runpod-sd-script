@@ -2,6 +2,8 @@
 
 ## Getting started
 
+**You need to use the PyTorch template (python3.10) in Runpod.**
+
 * Download the startscript file
 
 ```bash
@@ -15,7 +17,7 @@ wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_
 > DO NOT MODIFY *NGROK_TOKEN_HERE*
 
 ```bash
-sed -i sed -i 's/NGROK_TOKEN_HERE/2LVuzCWgjGPQ94uEKJ4uEKJKVJy_EKJKVJygjGPQ94ubvJW9Y/g' /root/runpod_startscript.sh
+sed -i 's/NGROK_TOKEN_HERE/2LVuzCWgjGPQ94uEKJ4uEKJKVJy_EKJKVJygjGPQ94ubvJW9Y/g' /root/runpod_startscript.sh
 ```
 
 * Grant the startscript execution privileges
@@ -56,6 +58,14 @@ Now enjoy it.
 ```bash
 wget https://gist.github.com/panta5/8706ce687576c4a80192fa3c05cffafc/raw/runpod_sd_webui_startscript.sh -O /root/runpod.sh && chmod +x /root/runpod.sh && sed -i 's/NGROK_TOKEN_HERE/토큰여기다넣어/g' /root/runpod.sh && bash /root/runpod.sh
 ```
+
+## 유의사항
+
+* 유지보수는 내가 필요하면 할 예정임
+* 한번만 설치해두면 다음부터는 */workspace/stable-diffusion-webui/start.sh* 만 켜면 자동으로 켜짐
+* 스팟 인스턴스 호환용으로 만들긴 했는데 스팟에서 제대로 작동안될수도 있음
+* PyTorch 템플릿 써야 제대로 작동될거임
+* 구름도 될거같긴한데 파이썬 3.10 이랑 pip는 사전설치 해야된다는거!!
 
 
 ## Credit
